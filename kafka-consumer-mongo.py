@@ -31,7 +31,7 @@ try:
     client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 
-    db = client.memes
+    db = client.itzelrios
     print("MongoDB Connected successfully!")
 except:
     print("Could not connect to MongoDB")
@@ -46,11 +46,11 @@ for msg in consumer:
     print(record)
     name = record['name']
 
-    # Create dictionary and ingest data into MongoDB
+    # Create dictionary and ingest data into MongoDB hhyhhyyh
     try:
        meme_rec = {'name':name }
        print (meme_rec)
-       meme_id = db.ejemplo_info.insert_one(meme_rec)
+       meme_id = db.itzelrios_info.insert_one(meme_rec)
        print("Data inserted with record ids", meme_id)
 
        subprocess.call(['sh', './test.sh'])
